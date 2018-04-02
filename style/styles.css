@@ -61,6 +61,35 @@ body {
   transform: rotate(-20deg)
 }
 
+.eye {
+  position: absolute;
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 170px;
+  margin-top: 66px;
+  z-index: 2;
+}
+
+.blink-overlay {
+  position: absolute;
+  z-index: 3;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 3px;
+  animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 .innerear {
   position: absolute;
   background-color: pink;
