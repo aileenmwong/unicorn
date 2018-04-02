@@ -165,6 +165,7 @@ body {
   transform: rotate(25deg);
   z-index: -3;
   border-right: 3px solid lightgray;
+  animation: swingfront 1s infinite;
 }
 
 .backleg-front {
@@ -178,6 +179,7 @@ body {
   transform: rotate(-25deg);
   z-index: -2;
   border-right: 3px solid lightgray;
+  animation: swingback 1s infinite;
 }
 
 .frontleg-behind {
@@ -191,6 +193,7 @@ body {
   transform: rotate(25deg);
   z-index: -3;
   border-right: 3px solid lightgray;
+  animation: swingback 1s infinite;
 }
 
 .frontleg-front {
@@ -204,9 +207,32 @@ body {
   transform: rotate(-25deg);
   z-index: -2;
   border-right: 3px solid lightgray;
+  animation: swingfront 1s infinite;
 }
 
+@keyframes swingback {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
 
+@keyframes swingfront {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(020deg);
+  }
+}
 
 
 
