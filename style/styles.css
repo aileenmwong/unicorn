@@ -125,6 +125,57 @@ body {
   transform: rotate(-17deg)
 }
 
+.backleg-behind {
+  position: absolute;
+  height: 100px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 70px;
+  margin-left: 30px;
+  transform: rotate(25deg);
+  z-index: -3;
+  border-right: 3px solid lightgray;
+}
+
+.backleg-front {
+  position: absolute;
+  height: 100px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 70px;
+  margin-left: 30px;
+  transform: rotate(-25deg);
+  z-index: -2;
+  border-right: 3px solid lightgray;
+}
+
+.frontleg-behind {
+  position: absolute;
+  height: 100px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 70px;
+  margin-left: 140px;
+  transform: rotate(25deg);
+  z-index: -3;
+  border-right: 3px solid lightgray;
+}
+
+.frontleg-front {
+  position: absolute;
+  height: 100px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 70px;
+  margin-left: 140px;
+  transform: rotate(-25deg);
+  z-index: -2;
+  border-right: 3px solid lightgray;
+}
 
 
 
