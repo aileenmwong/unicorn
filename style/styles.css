@@ -1,11 +1,19 @@
 body {
-  background-color: purple;
+  background-color: rgb(170,179,190);
 }
+
+.allItems {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+/*UNICORN*/
 
 .unicorn-container {
   position: fixed;
-  top: 30%;
-  left: 30%;
+  display: inline-block;
+  top: 160px;
 }
 
 .torso {
@@ -15,6 +23,7 @@ body {
   border-radius: 50px;
   position: absolute;
   margin-top: 100px;
+  margin-left: -50px;
   z-index: 1;
 }
 
@@ -25,7 +34,7 @@ body {
   height: 150px;
   border-radius: 50px;
   margin-top: 40px;
-  margin-left: 115px;
+  margin-left: 65px;
   transform: rotate(20deg);
   z-index: 2;
 }
@@ -37,7 +46,7 @@ body {
   height: 50px;
   border-radius: 50%;
   margin-top: 157px;
-  margin-left: 15px;
+  margin-left: -35px;
 }
 
 .nose {
@@ -47,7 +56,7 @@ body {
   height: 40px;
   border-radius: 30px;
   margin-top: 70px;
-  margin-left: 155px;
+  margin-left: 105px;
   transform: rotate(5deg)
 }
 
@@ -58,7 +67,7 @@ body {
   height: 70px;
   border-radius: 50%;
   margin-top: 15px;
-  margin-left: 140px;
+  margin-left: 90px;
   transform: rotate(-20deg);
   z-index: 0;
 }
@@ -79,7 +88,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  margin-left: 170px;
+  margin-left: 120px;
   margin-top: 66px;
   z-index: 3;
 }
@@ -109,7 +118,7 @@ body {
   width: 20px;
   height: 80px;
   border-radius: 50%;
-  margin-left: 170px;
+  margin-left: 120px;
   transform: rotate(5deg);
   z-index: 0;
 }
@@ -120,7 +129,7 @@ body {
   background-color: magenta;
   height: 60px;
   width: 60px;
-  margin-left: 125px;
+  margin-left: 75px;
   margin-top: 25px;
   z-index: -2;
 }
@@ -131,7 +140,7 @@ body {
   background-color: magenta;
   height: 70px;
   width: 70px;
-  margin-left: 90px;
+  margin-left: 40px;
   margin-top: 45px;
   z-index: -2;
 }
@@ -142,14 +151,14 @@ body {
   background-color: magenta;
   height: 70px;
   width: 70px;
-  margin-left: 70px;
+  margin-left: 20px;
   margin-top: 65px;
   z-index: -2;
 }
 
 .tail {
   margin-top: 100px;
-  margin-left: -70px;
+  margin-left: -120px;
   animation: flick 2s cubic-bezier(.17,.67,.83,.67) infinite;
   transform-origin: right;
   z-index: -2;
@@ -212,14 +221,14 @@ body {
 
 .backleg-behind {
   margin-top: 70px;
-  margin-left: 30px;
+  margin-left: -20px;
   z-index: -3;
   animation: swingfront .5s infinite;
 }
 
 .backleg-front {
   margin-top: 70px;
-  margin-left: 30px;
+  margin-left: -20px;
   z-index: -2;
   border-right: 3px solid lightgray;
   animation: swingback .5s infinite;
@@ -227,7 +236,7 @@ body {
 
 .frontleg-behind {
   margin-top: 70px;
-  margin-left: 140px;
+  margin-left: 90px;
   z-index: -3;
   border-right: 3px solid lightgray;
   animation: swingback .5s infinite;
@@ -235,7 +244,7 @@ body {
 
 .frontleg-front {
   margin-top: 70px;
-  margin-left: 140px;
+  margin-left: 90px;
   z-index: -2;
   border-right: 3px solid lightgray;
   animation: swingfront .5s infinite;
@@ -265,5 +274,164 @@ body {
   }
 }
 
+/*BACKGROUND*/
+
+.rainbow-background {
+  position: fixed;
+  top: 300px;
+  z-index: -10;
+}
+
+.rainbow-lines {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  z-index: -10;
+}
+
+.line {
+  width: 20px;
+  height: 100%;
+  transform: scaleY(0.4);
+  margin: 2px;
+  animation: wave 2s infinite ease-in-out;
+  z-index: -10;
+}
+
+@keyframes wave {
+    0% {
+      transform: scaleY(0.4);
+    }
+    25% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.4);
+    }
+    100% {
+      transform: scaleY(.4);
+    }
+}
+
+.red1 {
+  animation-delay: 0.2s;
+}
+
+.orange1 {
+  animation-delay: 0.4s;
+}
+
+.yellow1 {
+  animation-delay: 0.6s;
+}
+
+.green1 {
+  animation-delay: 0.8s;
+}
+
+.blue1 {
+  animation-delay: 1.0s;
+}
+
+.purple1 {
+  animation-delay: 1.2s;
+}
+
+.red2 {
+  animation-delay: 1.4s;
+}
+
+.orange2 {
+  animation-delay: 1.6s;
+}
+
+.yellow2 {
+  animation-delay: 1.8s;
+}
+
+.green2 {
+  animation-delay: 2s;
+}
+
+.blue2 {
+  animation-delay: 2.2s;
+}
+
+.purple2 {
+  animation-delay: 2.4s;
+}
+
+.red3 {
+  animation-delay: 2.6s;
+}
+
+.orange3 {
+  animation-delay: 2.8s;
+}
+
+.yellow3 {
+  animation-delay: 3.0s;
+}
+
+.green3 {
+  animation-delay: 3.2s;
+}
+
+.blue3 {
+  animation-delay: 3.4s;
+}
+
+.purple3 {
+  animation-delay: 3.6s;
+}
+
+.red4 {
+  animation-delay: 3.8s;
+}
+
+.orange4 {
+  animation-delay: 4.0s;
+}
+
+.yellow4 {
+  animation-delay: 4.2s;
+}
+
+.green4 {
+  animation-delay: 4.4s;
+}
+
+.blue4 {
+  animation-delay: 4.6s;
+}
+
+.purple4 {
+  animation-delay: 4.8s;
+}
+
+.green {
+  background-color: rgb(18,197,72);
+}
+
+.yellow {
+  background-color: rgb(255,185,0);
+}
+
+.orange {
+  background-color: rgb(255,120,0);
+}
+
+.red {
+  background-color: rgb(245,0,37);
+}
+
+.purple {
+  background-color: rgb(166,23,150);
+}
+
+.blue {
+  background-color: rgb(0,155,225);
+}
 
 
