@@ -15,6 +15,7 @@ body {
   border-radius: 50px;
   position: absolute;
   margin-top: 100px;
+  z-index: 1;
 }
 
 .head {
@@ -26,7 +27,7 @@ body {
   margin-top: 40px;
   margin-left: 115px;
   transform: rotate(20deg);
-  z-index: 1;
+  z-index: 2;
 }
 
 .belly {
@@ -58,7 +59,18 @@ body {
   border-radius: 50%;
   margin-top: 15px;
   margin-left: 140px;
-  transform: rotate(-20deg)
+  transform: rotate(-20deg);
+  z-index: 0;
+}
+
+.innerear {
+  position: absolute;
+  background-color: pink;
+  width: 15px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-left: 2px;
 }
 
 .eye {
@@ -69,7 +81,7 @@ body {
   border-radius: 50%;
   margin-left: 170px;
   margin-top: 66px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .blink-overlay {
@@ -90,17 +102,6 @@ body {
   }
 }
 
-.innerear {
-  position: absolute;
-  background-color: pink;
-  width: 15px;
-  height: 60px;
-  border-radius: 50%;
-  margin-top: 18px;
-  margin-left: 142px;
-  transform: rotate(-20deg);
-  z-index: 0;
-}
 
 .horn {
   position: absolute;
@@ -113,9 +114,57 @@ body {
   z-index: 0;
 }
 
+.manetop {
+  position: absolute;
+  border-radius: 50%;
+  background-color: magenta;
+  height: 60px;
+  width: 60px;
+  margin-left: 125px;
+  margin-top: 25px;
+  z-index: -2;
+}
+
+.manemiddle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: magenta;
+  height: 70px;
+  width: 70px;
+  margin-left: 90px;
+  margin-top: 45px;
+  z-index: -2;
+}
+
+.manebottom {
+  position: absolute;
+  border-radius: 50%;
+  background-color: magenta;
+  height: 70px;
+  width: 70px;
+  margin-left: 70px;
+  margin-top: 65px;
+  z-index: -2;
+}
+
 .tail {
   margin-top: 100px;
-  margin-left: -75px;
+  margin-left: -70px;
+  animation: flick 2s cubic-bezier(.17,.67,.83,.67) infinite;
+  transform-origin: right;
+  z-index: -2;
+}
+
+@keyframes flick {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
 }
 
 .tail-top {
@@ -125,7 +174,6 @@ body {
   border-top: 25px solid transparent;
   border-left: 30px solid magenta;
   border-bottom: 25px solid transparent;
-  z-index: 3;
   margin-left: 50px;
   transform: rotate(20deg);
 }
@@ -135,11 +183,11 @@ body {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  z-index: 4;
   background-color: magenta;
   margin-left: -13px;
   margin-top: -28px;
 }
+
 
 .tail-end {
   position: absolute;
@@ -148,66 +196,49 @@ body {
   border-top: 25px solid transparent;
   border-right: 30px solid magenta;
   border-bottom: 25px solid transparent;
-  z-index: 2;
   margin-left: -32px;
   margin-top: -3px;
   transform: rotate(-17deg)
 }
 
-.backleg-behind {
+.leg {
   position: absolute;
   height: 100px;
   width: 30px;
   border-radius: 50%;
   background-color: white;
+  border-right: 3px solid lightgray;
+}
+
+.backleg-behind {
   margin-top: 70px;
   margin-left: 30px;
-  transform: rotate(25deg);
   z-index: -3;
-  border-right: 3px solid lightgray;
-  animation: swingfront 1s infinite;
+  animation: swingfront .5s infinite;
 }
 
 .backleg-front {
-  position: absolute;
-  height: 100px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: white;
   margin-top: 70px;
   margin-left: 30px;
-  transform: rotate(-25deg);
   z-index: -2;
   border-right: 3px solid lightgray;
-  animation: swingback 1s infinite;
+  animation: swingback .5s infinite;
 }
 
 .frontleg-behind {
-  position: absolute;
-  height: 100px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: white;
   margin-top: 70px;
   margin-left: 140px;
-  transform: rotate(25deg);
   z-index: -3;
   border-right: 3px solid lightgray;
-  animation: swingback 1s infinite;
+  animation: swingback .5s infinite;
 }
 
 .frontleg-front {
-  position: absolute;
-  height: 100px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: white;
   margin-top: 70px;
   margin-left: 140px;
-  transform: rotate(-25deg);
   z-index: -2;
   border-right: 3px solid lightgray;
-  animation: swingfront 1s infinite;
+  animation: swingfront .5s infinite;
 }
 
 @keyframes swingback {
@@ -230,7 +261,7 @@ body {
     transform: rotate(-20deg);
   }
   100% {
-    transform: rotate(020deg);
+    transform: rotate(20deg);
   }
 }
 
